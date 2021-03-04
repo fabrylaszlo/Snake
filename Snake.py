@@ -1,5 +1,6 @@
 import turtle
 import time
+from random import randint
 
 
 def Jobbra():
@@ -8,6 +9,10 @@ def Jobbra():
 
 def Ballra():
     fej.left(90)
+
+
+def gyumolcs_kirak:
+    x = randint(-380, 380)
 
 
 palya = turtle.Screen()
@@ -28,11 +33,10 @@ kijelzo= turtle.Turtle()
 kijelzo.color("white")
 kijelzo.hideturtle()
 kijelzo.penup()
-kijelzo.goto(0, 0)
 kijelzo.clear()
+
 while True:
     fej.forward(20)
-    palya.update()
     if fej.xcor() > 400:
         kijelzo.write("Game Over", align="center", font=("Arial", 36, "bold"))
     if fej.xcor() < -400:
@@ -41,4 +45,5 @@ while True:
         kijelzo.write("Game Over", align="center", font=("Arial", 36, "bold"))
     if fej.ycor() < -300:
         kijelzo.write("Game Over", align="center", font=("Arial", 36, "bold"))
+    palya.update()
     time.sleep(0.15)
